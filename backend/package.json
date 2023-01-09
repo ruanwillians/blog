@@ -1,30 +1,35 @@
 {
-  "name": "blog",
+  "name": "blog backend",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "dev": "node ace serve --watch",
+    "build": "node ace build --production",
+    "start": "node server.js"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.9.5",
+    "@japa/preset-adonis": "^1.2.0",
+    "@japa/runner": "^2.2.2",
+    "@types/proxy-addr": "^2.0.0",
+    "@types/source-map-support": "^0.5.6",
+    "adonis-preset-ts": "^2.1.0",
+    "pino-pretty": "^9.1.1",
+    "typescript": "~4.6",
+    "youch": "^3.2.2",
+    "youch-terminal": "^2.1.5"
+  },
   "dependencies": {
-    "@strapi/strapi": "4.5.4",
-    "@strapi/plugin-users-permissions": "4.5.4",
-    "@strapi/plugin-i18n": "4.5.4",
-    "better-sqlite3": "7.4.6"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "039952b0-d26f-409f-acfc-fe9ad175e74f"
-  },
-  "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+    "@adonisjs/auth": "^8.2.3",
+    "@adonisjs/core": "^5.9.0",
+    "@adonisjs/lucid": "^18.3.0",
+    "@adonisjs/repl": "^3.1.11",
+    "luxon": "^3.2.0",
+    "phc-argon2": "^1.1.4",
+    "proxy-addr": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.21",
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
+  }
 }

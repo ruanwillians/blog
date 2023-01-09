@@ -1,5 +1,16 @@
 <template>
-  <q-item
+  <div class="lin">
+    <q-item
+    clickable
+    tag="a"
+    :href="Feed"
+  >
+    <q-item-section>
+      <q-item-label>Feed</q-item-label>
+    </q-item-section>
+  </q-item>
+  
+    <q-item
     clickable
     tag="a"
     :href="Postar"
@@ -8,6 +19,9 @@
       <q-item-label>Postar</q-item-label>
     </q-item-section>
   </q-item>
+    
+  </div>
+  
 </template>
 
 <script>
@@ -16,13 +30,13 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'EssentialLink',
   props: {
-    sair: {
+    Feed: {
       type: String,
-      default: '/'
+      default: `/feed${localStorage.getItem('userId')}`
     },
     Postar: {
       type: String,
-      default: '/'
+      default: '/create'
     },
   }
 })

@@ -4,22 +4,29 @@
       <q-input
         filled
         type="email"
+        class="q-mb-sm"
         v-model="user.user.email"
         label="Email"
-        lazy-rules
-        name="identifier"
         :rules="[(val) => (val && val.length > 0) || 'O email é obrigatório']"
-      />
+        >
+        <template v-slot:prepend>
+            <q-icon name="email" />
+          </template>
+      </q-input>
 
       <q-input
         filled
+        class="q-mb-sm"
         type="password"
         v-model="user.user.password"
         label="Password"
-        lazy-rules
-        name="password"
-        :rules="[(val) => (val && val.length > 0) || 'A senha é obrigatória']"
-      />
+        :rules="[(val) => (val && val.length > 0) || 'A senha é obrigatória']">
+
+        <template v-slot:prepend>
+            <q-icon name="password" />
+          </template>
+      
+      </q-input>
 
       <div>
         <router-view
@@ -48,7 +55,7 @@ export default {
     const router = useRouter()
     return {
       user,
-      router
+      router,
     };
   },
   methods: {
